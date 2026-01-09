@@ -9,12 +9,13 @@ function mincost(arr)
 	let cost = 0;
 	ropes.sort((a,b)=>a-b);
 	while(n>1){
+		ropes.sort((a,b)=>a-b);
 		let first = ropes.shift();
 		let second = ropes.shift();
 		let sum = first + second;
 		cost+=sum;
 		ropes.push(sum);
-		ropes.sort((a,b)=>a-b);
+		
 	}
 	return cost;
   
